@@ -19,3 +19,9 @@ To make network calls against the API, go to `src/actions/apis/api.js` and uncom
 * **Font Awesome** - Icons
 * **Jquery** - Javascript helper utilities and DOM manipulation
 * **Lodash** - Javascript helper utilities
+
+### Databases
+* The database can be accessed @ [localhost:8080/h2-console](localhost:8080/h2-console) with the below credentials,
+  * JDBC URL: jdbc:h2:mem:test-db;MODE=DB2;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  * User Name: sa
+  * Password: (blank)
