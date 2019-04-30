@@ -1,0 +1,35 @@
+.linage {
+    fill: none;
+    stroke: black;
+}
+.marriage {
+    fill: none;
+    stroke: black;
+}
+.node {
+    background-color: lightblue;
+    border-style: solid;
+    border-width: 1px;
+}
+.nodeText{
+    font-size: 14px;
+}
+
+.sexM, .sex {
+    background-color: lightblue;
+    border-style: solid;
+    border-width: 1px;
+}
+.sexF {
+    background-color: pink;
+    border-style: solid;
+    border-width: 1px;
+}
+.disabled {
+    opacity: 0.5;
+}
+
+.ancestorHeading {
+    font-weight: 900;
+
+}
