@@ -38,10 +38,13 @@ export class Member extends Component {
         this.reloadMembers();
     }
 
+    // Closes the modal.
     handleClose = () => {
         this.setState({open: false});
     };
 
+    // Triggered when the form is submitted.
+    // It creates or updates a member on the server.
     onSubmit = (formValues) => {
         const member = {
             memberId: this.state.memberId,
@@ -53,7 +56,7 @@ export class Member extends Component {
         };
         if (_.isEqual(this.props.member, formValues)) {
             this.setState({
-                message: 'Nothing to update'
+                message: 'Nothing to update.'
             });
             return;
         }
@@ -69,6 +72,7 @@ export class Member extends Component {
         });
     };
 
+    // Sends a server request to delete a member
     delete = () => {
         this.props.deleteMember(this.state.memberId).then(() => {
             this.setState({
@@ -97,6 +101,8 @@ export class Member extends Component {
         });
     };
 
+    // Triggered by selecting a member from the dropdown.
+    // Sends a REST call to the server to fetch details about the member selected.
     handleClick = (selectedMember) => {
         
         this.setState({selectedMember});
@@ -127,6 +133,7 @@ export class Member extends Component {
         }
     };
 
+    // Triggered by clicking the Cancel button on the form
     cancel = () => {
         this.setState({
             edit: false,
@@ -136,10 +143,12 @@ export class Member extends Component {
         this.props.reset();
     };
 
+    // Resets the form
     reset = () => {
         this.props.reset();
     };
 
+    // Closes the Notification.
     closeNotification = () => {
         this.setState({
             message: null

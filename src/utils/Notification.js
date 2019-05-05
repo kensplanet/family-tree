@@ -1,3 +1,4 @@
+// Provide brief messages about app processes through a message - at the top right of the screen.
 import React, {Component} from "react";
 import Snackbar from '@material-ui/core/Snackbar';
 

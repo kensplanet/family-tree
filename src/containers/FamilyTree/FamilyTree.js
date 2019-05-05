@@ -36,6 +36,7 @@ class FamilyTree extends Component {
                 const {familyTree} = this.props,
                     memberId = selectedMember.value;
 
+                // A Node indicates the member, spouse and children.
                 let generateNodes = (memberId) => {
                     let member = FamilyTreeHelper.getObject(familyTree, 'memberId', memberId);
                     let spouses = (member.spouses || [])
@@ -73,7 +74,8 @@ class FamilyTree extends Component {
                     }];
                 };
 
-
+                // This is the main method which generates the family tree.
+                // It traverses one level up (if possible) to display the parents and siblings.
                 let generateFamilyTree = (memberId) => {
                     const member = FamilyTreeHelper.getObject(familyTree, 'memberId', memberId);
                     if (member.parent) {

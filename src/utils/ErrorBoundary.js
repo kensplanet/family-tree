@@ -1,3 +1,6 @@
+// Error boundaries are React components that catch JavaScript errors anywhere in their child component tree,
+// log those errors, and display a fallback UI instead of the component tree that crashed.
+
 import React, {Component} from 'react';
 
 class ErrorBoundary extends Component {

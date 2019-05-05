@@ -22,6 +22,7 @@ class Relationship extends Component {
         };
     }
 
+    // Fetches the list of members from the server.
     loadMembers = () => {
         this.props.getMembers().then(() => {
             this.setState({
@@ -35,6 +36,7 @@ class Relationship extends Component {
         this.loadMembers();
     }
 
+    // Triggered when user selects members to create a spousal relationship.
     handleClick = (selectedOptions) => {
         if (selectedOptions.length === 0) {
             this.loadMembers();
@@ -55,6 +57,7 @@ class Relationship extends Component {
         }
     };
 
+    // Triggered when user selects a member to create a parental relationship.
     handleMemberClick = (selectedMember) => {
         this.setState({selectedMember});
         if (_.get(selectedMember, 'memberId')) {
@@ -75,16 +78,19 @@ class Relationship extends Component {
         }
     };
 
+    // Triggered when user selects a parent to create a parental relationship.
     handleParentClick = (selectedParent) => {
         this.setState({selectedParent});
     };
 
+    // Closes the Notification.
     closeNotification = () => {
         this.setState({
             message: null
         });
     };
 
+    // Triggered when the CREATE PARENTAL RELATIONSHIP button is clicked.
     addParent = () => {
         const {selectedMember, selectedParent} = this.state;
         let member = {
@@ -103,7 +109,7 @@ class Relationship extends Component {
         });
     };
 
-
+    // Triggered when the CREATE SPOUSAL RELATIONSHIP button is clicked.
     addCouple = () => {
         let parent = {
             members: []
