@@ -13,7 +13,7 @@ import Select from 'react-select';
 import Notification from '../../utils/Notification'
 import _ from 'lodash';
 
-class Member extends Component {
+export class Member extends Component {
     constructor(props) {
         super(props);
         this.state = {

@@ -37,7 +37,7 @@ class Header extends Component {
     };
 
     logout = () => {
-        window.location.href = 'login';
+        window.location.href = 'logout';
     };
 
     generateTabs = () => {
@@ -45,7 +45,7 @@ class Header extends Component {
             {value} = this.state;
         if (userContext === 'admin') {
             return (
-                <Tabs value={value} onChange={this.handleChange}>
+                <Tabs value={value} onChange={this.handleChange} className={'abc'}>
                     <Tab label="View Family Tree" component={Link} to="/familyTree"/>
                     <Tab label="Member Manager" component={Link} to="/member"/>
                     <Tab label="Relationship Manager" component={Link} to="/relationship"/>
@@ -54,9 +54,9 @@ class Header extends Component {
             )
         } else {
             return (
-                <Tabs value={value} onChange={this.handleChange}>
-                    <Tab label="View Family Tree" component={Link} to="/familyTree"/>
-                    <Tab label="Logout" component={Button} onClick={this.logout}/>
+                <Tabs value={value} onChange={this.handleChange} className={'abc'}>
+                    <Tab label="View Family Tree" component={Link} to="/familyTree" className={'abc'}/>
+                    <Tab label="Logout" component={Button} onClick={this.logout} className={'abc'}/>
                 </Tabs>
             )
         }

@@ -1,6 +1,6 @@
 {
   "name": "family-tree",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
@@ -9,6 +9,8 @@
     "@material-ui/core": "^3.9.3",
     "axios": "^0.18.0",
     "d3-dtree": "^2.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
     "jquery": "^3.4.0",
     "lodash": "^4.17.11",
     "react": "^16.8.6",
